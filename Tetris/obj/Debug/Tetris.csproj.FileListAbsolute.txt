@@ -1,0 +1,17 @@
+C:\Users\kjw2\source\repos\Tetris\Tetris\bin\Debug\Tetris.exe.config
+C:\Users\kjw2\source\repos\Tetris\Tetris\bin\Debug\Tetris.exe
+C:\Users\kjw2\source\repos\Tetris\Tetris\bin\Debug\Tetris.pdb
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.MainMenu.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.Properties.Resources.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.csproj.GenerateResource.cache
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.csproj.CoreCompileInputs.cache
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.exe
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.pdb
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.TetrisBoard.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.UserControls.TetrisBlockQueue.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.UserControls.TetrisBoardMatrix.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.csprojAssemblyReference.cache
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.UserControls.HighScoreBoard.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.UserControls.HighScoreRow.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.UserControls.HighScoreEntryDialog.resources
+C:\Users\kjw2\source\repos\Tetris\Tetris\obj\Debug\Tetris.UserControls.MatchAnimationControl.resources

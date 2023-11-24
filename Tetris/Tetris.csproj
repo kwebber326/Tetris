@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3FD716F3-82E4-4001-98B1-33532CF2FF92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tetris</RootNamespace>
+    <AssemblyName>Tetris</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\Block.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Objects\Enums\Direction.cs" />
+    <Compile Include="Objects\Enums\MovementType.cs" />
+    <Compile Include="Objects\Enums\TetrisShapeType.cs" />
+    <Compile Include="Objects\HighScore.cs" />
+    <Compile Include="Objects\TetrisEventArgs\BlockEventArgs.cs" />
+    <Compile Include="Objects\TetrisEventArgs\GameUpdateEventArgs.cs" />
+    <Compile Include="Objects\TetrisEventArgs\MatchEventArgs.cs" />
+    <Compile Include="Objects\TetrisEventArgs\ShapeEventArgs.cs" />
+    <Compile Include="Objects\Shape.cs" />
+    <Compile Include="Objects\TetrisGrid.cs" />
+    <Compile Include="Objects\TetrisGameLogic.cs" />
+    <Compile Include="Objects\Shapes\TShape.cs" />
+    <Compile Include="Objects\Utilities\BlockUtilities.cs" />
+    <Compile Include="Objects\Utilities\FileIOUtilities.cs" />
+    <Compile Include="Objects\Utilities\ShapeFactory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TetrisBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TetrisBoard.Designer.cs">
+      <DependentUpon>TetrisBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HighScoreBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HighScoreBoard.Designer.cs">
+      <DependentUpon>HighScoreBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HighScoreEntryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\HighScoreEntryDialog.Designer.cs">
+      <DependentUpon>HighScoreEntryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HighScoreRow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\HighScoreRow.Designer.cs">
+      <DependentUpon>HighScoreRow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MatchAnimationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MatchAnimationControl.Designer.cs">
+      <DependentUpon>MatchAnimationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TetrisBlockQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TetrisBlockQueue.Designer.cs">
+      <DependentUpon>TetrisBlockQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TetrisBoardMatrix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\TetrisBoardMatrix.Designer.cs">
+      <DependentUpon>TetrisBoardMatrix.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TetrisBoard.resx">
+      <DependentUpon>TetrisBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HighScoreBoard.resx">
+      <DependentUpon>HighScoreBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HighScoreEntryDialog.resx">
+      <DependentUpon>HighScoreEntryDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\HighScoreRow.resx">
+      <DependentUpon>HighScoreRow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MatchAnimationControl.resx">
+      <DependentUpon>MatchAnimationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TetrisBlockQueue.resx">
+      <DependentUpon>TetrisBlockQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\TetrisBoardMatrix.resx">
+      <DependentUpon>TetrisBoardMatrix.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_light_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tetris_board_space.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stick_block.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\game_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\game_over.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TETRIS_3DS_LOGO.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
